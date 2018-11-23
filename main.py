@@ -20,7 +20,7 @@ class Xmlcheck():
 			#call check_tag function
 			try:
 				etree.fromstring(xml_data)
-				print("Sucess!!! Valid Xml File")
+				print("Success!!! Valid Xml File")
 				#chk snapshot
 				if item_version:
 					#get version node value
@@ -31,7 +31,7 @@ class Xmlcheck():
 							print("Output string created")
 							#update POM file
 							self.update_xmlVer( version_vl )
-							print("New file generated with name output_main")
+							print("Version Updated")
 						except etree.XMLSchemaError:
 							print(XMLSchemaError)
 					else:
