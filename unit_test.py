@@ -19,7 +19,7 @@ class TestStringMethods(unittest.TestCase):
 			#call check_tag function
 			chk_tag_vl = self.check_tag()
 			print(chk_tag_vl)
-			if chk_tag_vl == "Valid Tag Value":
+			if chk_tag_vl == "tag_found":
 				self.assertEqual(xml_data_inv,xml_data)
 			
 	def test_invalid_xml(self):
@@ -33,7 +33,7 @@ class TestStringMethods(unittest.TestCase):
 			#call check_tag function
 			chk_tag_vl = self.check_tag()
 			print(chk_tag_vl)
-			if chk_tag_vl == "Valid Tag Value":
+			if chk_tag_vl == "tag_found":
 				self.assertEqual(xml_data_inv,xml_data)
 			
 	def check_tag(self):
@@ -46,7 +46,7 @@ class TestStringMethods(unittest.TestCase):
 			return valid_vl
 		else:
 			tag_val = itemlist[0].firstChild.nodeValue
-			valid_vl = "tag found"
+			valid_vl = "tag_found"
 			return valid_vl			
 	
 	def test_snap(self):
